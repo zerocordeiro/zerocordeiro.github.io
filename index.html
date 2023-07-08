@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div id="conteudo">
     <header class="flex">
         <article>
             <h1>Zerocordeiro's<br/>webpage</h1>
@@ -23,10 +24,22 @@
         <section id="i_education">
             <article>
                 <h2>Education</h2>
-                MD Knowledge Engineering111
-                <p>Esp. Instructional Design</p>
-                <p>B.D. Graphic Design</p>
-                <p>T.D. System Analysis and Development</p>
+                <details open="open"> <!--remover depois este atributo "open"-->
+                    <summary>MD Knowledge Engineering</summary>
+                    <p>Detalhes sobre a formação</p>
+                </details>
+                <details open>
+                    <summary>Esp. Instructional Design</summary>
+                    <p>Parágrafo</p>
+                </details>
+                <details>
+                    <summary>B.D. Graphic Design</summary>
+                    <p>Descrição</p>
+                </details>
+                <details>
+                    <summary>T.D. System Analysis and Development</summary>
+                    <p>Descrição Tecnólogo</p>
+                </details>
             </article>
         </section>
         <section id="experience">
@@ -38,10 +51,11 @@
                 <p>Graphic Designer (estagiário)</p> <!--revisar-->
             </article>
         </section>
-        <section id="portfolio">
+        <section id="professional">
             <article>
-                <h2>Portfolio</h2>
-                Access
+                <h2>Professional</h2>
+                <a>Portfolio</a>
+                <a href="https://linkedin.com/zerocordeiro">Linkedin</a>
             </article>
         </section>
         <section id="contact">
@@ -56,5 +70,6 @@
     <footer>
 Copyright 2023 José R Cordeiro
     </footer>
+  </div>
   </body>
 </html>

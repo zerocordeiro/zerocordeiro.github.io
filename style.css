@@ -5,8 +5,21 @@ body{
     max-width:900px;
     min-width:300px;
 }
+div#conteudo{
+    display:block;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
 nav{
     display:flex;
+    align-items: center;
+    justify-content: center;
+}
+nav button{
+    display:block;
+    align-self: center;
 }
 
 header{
@@ -24,6 +37,8 @@ main{
     display:flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
+    min-height: 90%;
+    justify-content: center;
 }
 
 main section{
@@ -35,6 +50,11 @@ article details{
     margin:5px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+}
+article details p{
+    /* margin:5px; */
+    padding: 5px;
+    background-color: aquamarine;
 }
 
 footer{
