@@ -4,48 +4,152 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Zerocordeiro's webpage</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body{
+            width:70%;
+            max-width:900px;
+            min-width:300px;
+            margin:auto;
+            padding:0px;
+        }
+        div.conteudo{
+            display:block;
+            margin: auto;
+        }
+        header{
+            margin:auto;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            
+        }
+
+        nav{
+            display:flex;
+            flex-wrap: wrap;
+            /* flex-direction: row; */
+            /* align-items: center; */
+            justify-content: center;
+            /* flex-wrap: wrap; */
+        }
+        nav article{
+            flex:180px;
+            background-color: #cecece;
+            /* border: solid 1px black; */
+            text-align: center;
+            justify-content: center;
+            padding:10px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 0px #999999;
+        }
+
+        h2{
+            text-align: center;
+            background-color: #aeaeae;
+            overflow-x: visible;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        main{
+            display:flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            min-height: 90%;
+            justify-content: center;
+        }
+
+        main section{
+            flex: 200px;
+            background-color: aquamarine;
+            padding:5px;
+        }
+
+        article details{
+            background-color: bisque;
+            margin:5px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        article details p{ /*section#i_education article details p */
+            margin:0px;
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        #professional, #contact{
+            text-align: center;
+        }
+
+        footer{
+            background-color: #999999;
+            align-content: center;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
   </head>
   <body>
-    <div id="conteudo">
+    <div class="conteudo">
     <header class="flex">
         <article>
             <h1>Zerocordeiro's<br/>webpage</h1>
         </article>
     </header>
-    <nav class="flex">
-        <article class="c_opcoes">
-            <button class="c_navegacao" id="uiux">UI/UX</button>
-            <button class="c_navegacao" id="graphicdesigner">Graphic Designer</button>
-            <button class="c_navegacao" id="html"> Html, CSS, JS</button>
-        </article>
+    <nav>
+        <!-- <article class="c_opcoes"> -->
+            <article class="navegacao">
+                Html, CSS, JS
+            </article>
+            <article class="navegacao">
+                UI/UX</article>
+            <article class="navegacao">
+                Graphic Designer
+            </article>
+            
+        <!-- </article> -->
     </nav>
     <main>
         <section id="i_education">
             <article>
                 <h2>Education</h2>
                 <details open="open"> <!--remover depois este atributo "open"-->
-                    <summary>MD Knowledge Engineering</summary>
-                    <p>Detalhes sobre a formação</p>
+                    <summary>MEng.Knowledge Media</summary>
+                    <p>Master of Knowledge Management and Engineering @ <a href="https://ppgegc.paginas.ufsc.br/" target="_blank">Universidade Federal de Santa Catarina</a>. Concentration: Knowledge Media.</p>
+                    <p>For my master's I studied the effects of video games on the digital inclusion of senior citizens. The thesis (in portuguese) can be accessed by <a href="https://repositorio.ufsc.br/handle/123456789/227223" target="_blank">this link</a> (english abstract available) </p>
                 </details>
                 <details open>
-                    <summary>Esp. Instructional Design</summary>
-                    <p>Parágrafo</p>
+                    <summary>PgD.Instructional Design</summary>
+                    <p>Post-graduate Degree in Instructional Design @ <a href="https://www.ead.senac.br/pos-graduacao/design-instrucional/" target="_blank" > Senac</a></p>
                 </details>
-                <details>
-                    <summary>B.D. Graphic Design</summary>
-                    <p>Descrição</p>
+                <details open>
+                    <summary>B.Design</summary>
+                    <p>Bachelor's Degree in Design @ <a href="https://design.ufsc.br/" target="_blank">Universidade Federal de Santa Catarina</a></p>
                 </details>
-                <details>
-                    <summary>T.D. System Analysis and Development</summary>
-                    <p>Descrição Tecnólogo</p>
+                <details open>
+                    <summary>A.System Analysis and Development</summary>
+                    <p>Associate student in System Analysis and Development @ <a href="https://estacio.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas" target="_blank">Estácio</a></p>
                 </details>
             </article>
         </section>
         <section id="experience">
             <article>
                 <h2>Experience</h2>
-                <p>Técnico-Administrativo em Educação</p>
+                <details open>
+                    <summary>Técnico-Administrativo em Educação (UFSC)</summary>
+                    <ul>
+                        <li>Projetos:</li>
+                        <ul>
+                            <li>Ministrante de curso de informática para a terceira idade</li>
+                            <li>Criação de material para divulgação de eventos</li>
+                            <ul>
+                                <li>EGC</li>
+                                <li>Olimpíadas do CA</li>
+                                <li>Medita UFSC</li>
+                            </ul>
+                            <li>Elaboração de agenda escolar</li>
+                        </ul>
+                    </ul></details>
                 <p>Graphic Designer (self-emp)</p>
                 <p>Graphic Designer (trainee)</p> <!--revisar-->
                 <p>Graphic Designer (estagiário)</p> <!--revisar-->
@@ -54,8 +158,8 @@
         <section id="professional">
             <article>
                 <h2>Professional</h2>
-                <a>Portfolio</a>
-                <a href="https://linkedin.com/zerocordeiro">Linkedin</a>
+                <p><a href="" target="_blank">Portfolio</a></p>
+                <p><a href="https://linkedin.com/in/zerocordeiro" target="_blank">Linkedin</a></p>
             </article>
         </section>
         <section id="contact">
@@ -63,12 +167,12 @@
                 <h2>Contact</h2>
                 <p>José R Cordeiro</p>
                 <p>e-mail</p>
-                <p>WhatsApp</p>
+                <p><a href="https://wa.me/5548999247118?text=Hello%2C+I%27d+like+to+schedule+a+meeting.+My+name+is%3A+" target="_blank">WhatsApp</a></p>
             </article>
         </section>
     </main>
     <footer>
-Copyright 2023 José R Cordeiro
+Copyright 2023; José R Cordeiro
     </footer>
   </div>
   </body>
