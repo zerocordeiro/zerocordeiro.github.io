@@ -4,18 +4,18 @@ body{
     width:70%;
     max-width:900px;
     min-width:300px;
+    margin:auto;
+    padding:0px;
 }
-div#conteudo{
+div.conteudo{
     display:block;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    justify-items: center;
+    margin: auto;
 }
 nav{
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 nav button{
     display:block;
@@ -59,4 +59,5 @@ article details p{
 
 footer{
     background-color: #999999;
+    align-content: center;
 }
