@@ -9,7 +9,7 @@
             }
             .parallax__container{
                 margin:0px;
-                perspective: 2px;
+                perspective: 1px;
                 height:100vh;
                 overflow-x: hidden;
                 overflow-y: auto;
@@ -128,13 +128,26 @@
                 border-radius: 50%;
             }
             .lvl_upper{
-                transform:translateZ(1px);
+                transform:translateZ(0px) scale(1);
                 z-index:100;
-                height: 350vh;
-                width:200vh;
+                height: 170vh;
+                width:220vh;
                 background-color: #021505;
                 top:160vh;
-                left:00vh;
+                color:antiquewhite;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:30pt;
+                text-align: center;
+            }
+            .lvl_upper p{
+                display: inline-block;
+                vertical-align: middle;
+                padding:auto;
+            }
+            span{
+                height: 100%;
+                display:inline-block;
+                vertical-align: middle;
             }
             
         </style>
@@ -161,7 +174,7 @@
             <div class="parallax__layer lvl5" id="cloud1"></div>
             <div class="parallax__layer lvl5" id="cloud2"></div>
             <div class="parallax__layer lvl5" id="cloud3"></div>
-            <div class="parallax__layer lvl_upper"></div>
+            <div class="parallax__layer lvl_upper"><span></span><p>Nice to see you!</p></div>
         </div>
     </body>
 </html>
