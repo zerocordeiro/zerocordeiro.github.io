@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<!-- This is an example of simple "parallax" done by
+    fixing a div background so that it doesn't scroll 
+    along with the rest of the page, creating an effect
+    of whatever's in the bg seem like it's far away -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Parallax test</title>
+    <!-- This page was created by following the guide in https://blog.logrocket.com/create-parallax-scrolling-css/#implement-parallax-effect-css plus some tests of my own while doing so. 
+        José Cordeiro - zerocordeiro.github.io -->
+    <style>
+        body{
+            width:60%;
+            margin:auto;
+        }
+        section#bg-fixed{
+            background-image: url('../LandingPage/bg-fixo.jpg'); /*This is the image that will be in the background and is set to fixed below*/
+            background-attachment: fixed; /*this sets the bg image to be on a fixed position, making so that the other elements will scroll past it while it reamins static. This can create a cool "window" effect, making it look like the page has a hole that you can see through*/
+            /* background-size:cover;  */
+            /* This item above just sets the bg image to fill the container */
+            height:70vh;
+        }
+        section#sect-3{
+            background-image: url('../LandingPage/bg-fixo.jpg');
+            background-attachment: fixed;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <section id="bg-fixed">
+        <h1>Title BG-FIXED Section</h1>
+    </section>
+    <section id="sect-2">
+        <h2>This is the second section</h2>
+        <p>This is a paragraph</p>
+        <ol>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+        </ol>
+    </section>
+    <section id="sect-3">
+        <h2>This is the third section</h2>
+        <p>Another paragraph</p>
+        <p>and yet another one</p>
+        <p>third's a charm</p>
+        <ol>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+        </ol>
+    </section>
+    <section id="sect-4">
+        <h2>Fourth section</h2>
+        <p>Paragraph</p>
+        <ol>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+        </ol>
+
+    </section>
+
+</body>
+</html>

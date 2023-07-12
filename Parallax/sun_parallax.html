@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8"/>
+        <style>
+            
+            body{
+                margin:0px;
+            }
+            .parallax__container{
+                margin:0px;
+                perspective: 2px;
+                height:100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            .parallax__layer {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .lvl0 {
+                transform:translateZ(0px);
+                height:100vh;
+                z-index:2;
+            }
+            .sky-bg{
+                transform:translateZ(0px);
+                background:linear-gradient(cyan, pink, #0000aa);
+                height:200vh;
+                z-index:0;
+            }
+            .lvl1 {
+                transform: translateZ(0px) scale(1); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                z-index:98;
+                background-color: green;
+
+            }
+            #mountain{
+                width:100vh;
+                height:240vh;
+                top:80vh;
+                left:-20vh;
+                border-radius: 50%;
+            }
+            #grass{
+                width:2000vh;
+                height:200vh;
+                top:110vh;
+                left:-80vh;
+                border-radius: 100%;
+                /* border:1px solid black; */
+            }
+            .lvl2 {
+                transform: translateZ(-1px) scale(2); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                z-index:95;
+            }
+            #areia{
+                height:100vh;
+                width:300vh;
+                top:200vh;
+                background-color: darkorange;
+            }
+            #rock1{
+                background-color:rgb(79, 16, 69);
+                height:50px;
+                width:40px;
+                top:146vh;
+                left:100vh;
+                border-radius: 40%;
+            }
+            #rock2{
+                background-color: rgb(48, 66, 18);
+                height:50px;
+                width:40px;
+                top:150vh;
+                left:110vh;
+                border-radius: 40%;
+            }
+            .lvl3 {
+                transform: translateZ(-2px) scale(3); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                z-index:80;
+                height:500px;
+                width:19000px;
+                top:240vh;
+                left:500px;
+                background-color:cyan;
+            }
+            .lvl4 {
+                transform: translateZ(-3px) scale(4); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                border-radius: 50%;
+                width:50vh;
+                height:50vh;
+                top:120vh;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: yellow;
+                z-index: 70;
+            }
+            .lvl5{
+                transform:translateZ(-4px) scale(5);
+                z-index:75;
+            }
+            #cloud1{
+                background-color: rgba(244,244,244,0.7);
+                height:30px;
+                width:100px;
+                top:-40vh;
+                left:100vh;
+                border-radius: 450%;
+            }
+            #cloud2{
+                background-color:  rgba(244,244,244,0.7);
+                height:50px;
+                width:220px;
+                top:00vh;
+                left:300vh;
+                border-radius: 40%;
+            }
+            #cloud3{
+                background-color: rgba(244,244,244,0.7);
+                height:30px;
+                width:100px;
+                top:00vh;
+                left:-150vh;
+                border-radius: 50%;
+            }
+            .lvl_upper{
+                transform:translateZ(1px);
+                z-index:100;
+                height: 350vh;
+                width:200vh;
+                background-color: #021505;
+                top:160vh;
+                left:00vh;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="parallax__container">
+            <div class="sky-bg"></div>
+            <div class="parallax__layer lvl0">
+
+            </div>
+            <div class="parallax__layer lvl1" id="mountain"></div>
+            <div class="parallax__layer lvl1" id="grass"></div>
+            <div class="parallax__layer lvl2" id="areia">
+            </div>
+            <div class="parallax__layer lvl2" id="rock1">
+            </div>
+            <div class="parallax__layer lvl2" id="rock2">
+            </div>
+
+            <div class="parallax__layer lvl3">
+
+            </div>
+            <div class="parallax__layer lvl4"></div>
+            <div class="parallax__layer lvl5" id="cloud1"></div>
+            <div class="parallax__layer lvl5" id="cloud2"></div>
+            <div class="parallax__layer lvl5" id="cloud3"></div>
+            <div class="parallax__layer lvl_upper"></div>
+        </div>
+    </body>
+</html>
