@@ -22,7 +22,7 @@
             height: 100vh;
             /* Defining perspective and height  locks the perspective to this element's center
             The height will make so that the div.parallax will occupy all the screen size, so it's scroll bar will be the website's scrollbar
-            One important thing to notice is that this will "fix" the background color to the given height, so if you want to give a background color or static image you should put it in the <body> tag ajnd use div.parallax as a container for the ~whole website, minus background color or still image
+            One important thing to notice is that this will "fixate" the background color to the given height, so if you want to give a background color or static image you should put it in the <body> tag ajnd use div.parallax as a container for the ~whole website, minus background color or still image
             */
             overflow-x: hidden;
             overflow-y: auto; /* needs to be set to "auto" for the effect to work*/
@@ -53,7 +53,7 @@
             height:150px;
             width:150px;
             left:-200px;
-            top:100vh;
+            top:120vh;
             /* end of added by me  */
         }
         .parallax__layer--back-2 {
@@ -96,9 +96,10 @@
                 "transform-style: preserve-3d prevents the browser flattening the parallax__layer elements and position: relative is used to allow the child parallax__layer elements to be positioned relative to the group element."
             */
             /* Now this last one is a cool way to see what is happening during parallax. It will "rotate" the elements and make the page 3d-like */
-            /* transform: translate3d(700px, 0, -800px) rotateY(30deg); */
+            /* transform: translate3d(700px, 0px, -10px) rotateY(0.3deg); */
+            /* ^ For this to work properly and show what's intended you need to set the perspective to something higher, like 10px or even more */
             /* -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg); */
-            /* ^ can't make this work and have no idea why*/
+            /* perspective:1px; */
 
         }
     </style>

@@ -33,7 +33,8 @@
                 z-index:0;
             }
             .lvl1 {
-                transform: translateZ(0px) scale(1); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                transform: translateZ(0px) scale(1); 
+                /*^this is the default position. Positive numbers don't work (or at least not in this example)*/
                 z-index:98;
                 background-color: green;
 
@@ -89,10 +90,10 @@
                 background-color:cyan;
             }
             .lvl4 {
-                transform: translateZ(-9px) scale(10); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                transform: translateZ(-9px) scale(6); 
                 border-radius: 50%;
                 aspect-ratio: 1/1;
-                height:50%;
+                height:100%;
                 top:300%;
                 margin-left: auto;
                 margin-right: auto;
@@ -132,7 +133,7 @@
                 z-index:100;
                 height: 200%;
                 width:100%;
-                background-color: #021505;
+                background-color: rgba(2, 21, 5, .7);
                 top:160%;
                 color:antiquewhite;
                 font-family: Arial, Helvetica, sans-serif;
@@ -148,6 +149,14 @@
                 height: 100%;
                 display:inline-block;
                 vertical-align: middle;
+            }
+            footer{
+                background-color: black;
+                width:100%;
+                height: 10px;
+                color: aliceblue;
+                font-size: 16pt;
+                text-align: center;
             }
             
         </style>
@@ -174,7 +183,14 @@
             <div class="parallax__layer lvl5" id="cloud1"></div>
             <div class="parallax__layer lvl5" id="cloud2"></div>
             <div class="parallax__layer lvl5" id="cloud3"></div>
-            <div class="parallax__layer lvl_upper"><span></span><p>Nice to see you!</p></div>
+            <div class="parallax__layer lvl_upper">
+                <span></span>
+                <p>Have a nice day!</p>
+            </div>
+            <footer>
+                <p>lalalal</p>
+            </footer>
         </div>
+    
     </body>
 </html>
