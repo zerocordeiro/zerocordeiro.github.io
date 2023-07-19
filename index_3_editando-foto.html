@@ -11,7 +11,10 @@
             margin:auto;
             padding:0px;
             /* background-color: #fffaf4; */
-            background-image: linear-gradient(#fffaf4,#fffaf4,#fffaf4,#fffaf4,#f7911d18);
+            /* background-image: linear-gradient(#fffaf4,#fffaf4,#fffaf4,#fffaf4,#f7911d18); */
+            /* background-image: linear-gradient(#fffaf4,#f7911d18,#f7911d18,#f7911d18,#f7911d18,#f7911d18,#f7911d18,#f7911d18); */
+            background-color:#121212;
+            min-height:100vh;
         }
 
         div.parallax__container{
@@ -30,26 +33,44 @@
             
         div.conteudo{
             transform: translateZ(0px);
-            display:block;
-            margin: auto;
+            transform-style: preserve-3d;
+            /* display:block; */
+            /* margin: auto; */
         }
         header{
             margin:auto;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
-            
+            font-size:1.2em;
+            line-height: 1.2em;
+            color:whitesmoke;
+            font-weight:lighter;
+
+        }
+        header h1 webname{
+            font-variant: small-caps;
+            font-size: 1.9em;
+            font-weight:lighter;
+
         }
 
         nav{
+            transform:translateZ(-100px) scale(1.52);
+            transform-style: preserve-3d; 
+            position: absolute; 
+            overflow-y: hidden;
+            /* ^trying to keep parallax efects*/
             width: 100%;
             height:30vh;
             min-height:280px;
+            display:block;
             /* flex-direction: row; */
             /* align-items: center; */
-            justify-content: center;
+            /* justify-content: center; */
             /* flex-wrap: wrap; */
-            background-color:#00a79d;
-            overflow: hidden;
+            background-color:#00a79def;
+            /* overflow: hidden; */
+            box-shadow: 1px 1px 5px #efefef;
         }
         nav section{
             width:50%;
@@ -57,63 +78,107 @@
             float:left;
             position:relative;
         }
+        nav section#sec1{
+            transform: translateZ(-200px) scale(2);
+            position:absolute;
+            max-width:30%;
+            min-width:180px;
+            height:30vh;
+            min-height: 280px;
+            background-image: url(_images/foto_1000.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            background-attachment:fixed;
+            filter:grayscale(90%);
+        }
         p#presentation{
-            margin:30px 30% 10% 20%;
+            float:right;
+            text-align: right;
+            margin:30px;
             max-width:220px;
             min-width:160px;
             font-family:Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            line-height: 1.4em;
             color:#fefefe;
+            /* font-variant:small-caps; */
+            
         }
         p#presentation::selection{
             background-color: #eb5761;
-            color:black
+            color:black;
+            font-weight: 100;
         }
-        nav section article{
+        *::selection{
+            background-color: #eb5761;
+            color:black;
+        }
+        .flex{
+            height:100%;
+            display:flex;
+            flex-wrap: wrap;
+            /* flex-direction: row; */
+            justify-content: center;
+            align-items: stretch;
+        }
+        nav section article.navegacao{
+            flex:auto;
+            display: flex;
+            align-items: center;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #fefefe;
-            /* border: solid 1px black; */
+            font-size: 1em;
+            background-color: #fefefeee;
             text-align:center;
             vertical-align: middle;
-            margin:0 auto;
-            border-radius: 50%;
-            aspect-ratio: 1/1;
-            width:100px;
-            float:inherit;    
+            justify-content: space-around;
+            margin:10px;
+            border-radius: 5px;
+            min-width:150px;
             box-shadow: 2px 2px 3px #999999;
-            transition: width .1s transform .1s;
+            transition: width 1s transform 1s;
+        }
+        article.navegacao p{
+            position: absolute;
+            margin:auto;
+        }
+        article.navegacao a{
+            line-height: normal;
+            font-size: 1.2em;
+            display: inline-block;
             vertical-align: middle;
+            text-decoration: none;
+            /* display:none; */
+            transition: display 1s height 1s;
+            font-weight: bolder;
+            color:rgba(0, 0, 0, 0);
+        }
+        nav section article.navegacao:hover a{
+            display:block;
+            color:rgb(12, 121, 12);
+            z-index:2;
         }
         nav section article span{
-            height: 100%;
             display:inline-block;
             vertical-align: middle;
             overflow: hidden;
         }
-        nav section article:hover{
-            width:110px;
-            transform: translate(-5px,-5px);
-            font-weight: bolder;
+        nav section article.navegacao:hover p{
+            color:rgba(0,0,0,0);
+            /* width:100%; */
+            /* transform: translate(-5px,-5px); */
+            /* font-weight: bolder; */
+            /* font-size: 1.2rem; */
+            line-height: 1em;
         }
 
-        article#bubble1{
-            position: absolute;
-            left:0%;
-            top:5%;
-            border-radius: 31% 69% 67% 33% / 59% 37% 63% 41% ;
+        /* article#bubble1{
+            
         }
         article#bubble2{
-            position: absolute;
-            left:45%;
-            top:18%;
-            border-radius: 28% 72% 54% 46% / 71% 44% 56% 29%  ;
         }
         article#bubble3{
-            position:absolute;
-            left:18%;
-            top:55%;
-            z-index: 2;
-            border-radius: 63% 37% 54% 46% / 30% 60% 40% 70% ;
-        }
+        } */
 
         h2{
             text-align: center;
@@ -129,12 +194,14 @@
             flex-wrap: wrap;
             /* min-height: 90%; */
             justify-content: center;
-            /* background-color: bisque; */
+            /* background-color: #ffe4c4a9; */
         }
         p#smallnote{
+            width:100%;
             color: #eb5761;
             text-align: right;
             margin:0px;
+            margin-top:10px;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 0.9rem;
         }
@@ -144,8 +211,8 @@
             padding:5px;
         }
 
-        article details{
-            background-color: #fffaf499;
+        details.details_main{
+            background-color: #fffaf4f1;
             /* background-color: black; */
             margin:15px;
             padding:10px;
@@ -157,26 +224,32 @@
             box-shadow: 0px 0px 5px #00a79d;
             border-bottom: 1px solid #00a79d;
             border-left: 1px solid #00a79d;
-            color: #00a79d;
+            color: #00726a;
             transition: open 1s;
             border-radius: 2%;
         }
-        summary{
+        
+        details.details_main summary{
             letter-spacing: 1px;
             transition: color 0.3s;
         }
-        details[open]{
+        details.details_main[open]{
             /* background-image: linear-gradient(#00a79d, white); */
             /* background-color: inherit; */
             border: none;
             /* margin-bottom: 30px; */
         }
-        details[open] summary{
-            /* color:red; */
-        }
+        /* details.details_main[open] summary{
+            color:red; 
+        } */
         
-        article details p, article detail ul, article details li{
+        article details p, article details ul, article details li details.details_sub summary{
+            letter-spacing: 0px;
             line-height: 3rem;
+            text-align: left;
+            font-size: 1.5rem;
+            font-variant: normal;
+            font-weight: normal;
         }
         article details p{ /*section#i_education article details p */
             /* margin:0px; */
@@ -189,7 +262,7 @@
             margin-top:0px;
             padding-bottom: 5px;
         }
-        article summary, p.itens{
+        details.details_main summary, p.itens{
             /* display:block; */
             list-style:none;
             text-align: center;
@@ -198,6 +271,7 @@
             font-weight:bold;
             font-variant: small-caps;
         }
+
         p.itens{
             margin:5px;
         }
@@ -205,6 +279,10 @@
         #contact{
             text-align: center;
             min-width:360px;
+        }
+        #contact a, #contact p{
+            line-height: 2em;
+            text-align: center;
         }
 
         footer{
@@ -215,12 +293,14 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 0.9em;
             padding: 0.5em;
+
         }
         div#bg-div{
             z-index: -100;
         }
         div.decor{
-            background-color: #f7931d;
+            /* background-color: #f7931d; */
+            border:whitesmoke solid;
             border-radius: 50%;
             position: absolute;
             z-index:-100;
@@ -266,7 +346,7 @@
   <body>
 <div class="parallax__container" id="bg-div">
         <div class="decor parallax__layer" id="decor1"></div>
-        <div class="decor parallax__layer" id="decor2"></div>
+        <!-- <div class="decor parallax__layer" id="decor2"></div> -->
         <div class="decor parallax__layer" id="decor3"></div>
         <div class="decor parallax__layer" id="decor4"></div>
         <!-- <div class="decor parallax__layer" id="decor5"></div> -->
@@ -275,21 +355,21 @@
         <!-- <div class="decor parallax__layer" id="decor8"></div> -->
 
     <div class="conteudo">
-    <header class="flex">
+    <header>
         <article>
-            <h1>Zerocordeiro's<br/>webpage</h1>
+            <h1><webname>Zerocordeiro's</webname><br/>webpage</h1>
         </article>
     </header>
-    <nav>
+    <nav class="parallax__layer">
             <!--
                 
                 Presentation
             
             -->
-
+            <section id="sec1"></section>
         <section>
             <p id="presentation">Hi, I'm José Cordeiro.<br/>
-                I'm working on creating solutions and great experiences for the web. <br/><br/>
+                I'm creating solutions and great experiences for the web. <br/><br/>
                 
                 Let's work together!<br/>
                 Learn more about me on this page and get in touch.</p>
@@ -300,45 +380,54 @@
             
             -->
 
-        <section>
+        <section class="flex">
             <article class="navegacao" id="bubble1">
-                <span></span>
-                1in
+                <!-- <span></span> -->
+                <p>1in</p>
+                <a href="" target="_blank">1in</a>
             </article>
             <article class="navegacao" id="bubble2">
-                <span></span>
-                2github
+                <p>2github</p>
+                <a href="" target="_blank">2github</a>
             </article>
             <article class="navegacao" id="bubble3">
-                <span></span>
-                3Contact
+                <p>3Contact</p>
+                <a href="" target="_blank">3Contact</a>
             </article>
         </section>
         
     </nav>
     <main>
+        <p id="smallnote">-- Collapse All --</p>
         <section>
+            
             <article>
-                <p id="smallnote">-- Collapse All --</p>
+                
                             <!--
                 
                 FRONT-END WEB DEV
             
             -->
 
-                <details id="frontend" open="open"> <!--remover depois este atributo "open"-->
-                    <summary>Front-end web developer</summary>
+                <details class="details_main" id="frontend" open="open"> <!--remover depois este atributo "open"-->
+                    <summary>Front-end web development</summary>
                     <p>Main languages:</p>
                     <ul class="lista">
                         <li>Html5</li>
                         <li>CSS3 - Dynamic CSS</li>
                         <li>Javascript</li>
+                        <li><details class="details_sub" open="open"><summary>Javascript</summary>
+                            <!-- <p>descrição do item</p></details> -->
+                        </li>
+                        <li><details class="details_sub" open="open"><summary>Javascript</summary>
+                            <!-- <p>descrição do item</p></details> -->
+                        </li>
                     </ul>
                 </details>
             </article>
             <article>
-                <details id="designer">
-                    <summary>Designer</summary>
+                <details class="details_main" id="designer">
+                    <summary>Design</summary>
                     <p>
                         User-oriented<br/>
                         Print and Web<br/>
@@ -349,11 +438,12 @@
                         <li>Illustrator</li>
                         <li>Photoshop</li>
                         <li>InDesign</li>
+                        <li>Clip Studio</li>
                     </ul>
                 </details>
             </article>
             <article>
-                <details id="moreinfo" open>
+                <details class="details_main" id="moreinfo" open>
                     <summary>More info</summary>
                     <p>Education</p>
                 </details>
@@ -361,12 +451,15 @@
         </section>
         <section id="contact">
             <article>
-                <p class="itens">Contact/Links</p>
+                <details class="details_main" open="open">
+                <summary>Contact/Links</summary>
                 <p>José R Cordeiro</p>
-                <p><a href="https://github.com/zerocordeiro" target="_blank">GitHub</a></p>
-                <p><a href="https://linkedin.com/in/zerocordeiro" target="_blank">Linkedin</a></p>
-                <p>e-mail</p>
-                <p><a href="https://wa.me/5548999247118?text=Hello%2C+I%27d+like+to+schedule+a+meeting.+My+name+is%3A+" target="_blank">WhatsApp</a></p>
+                
+                <a href="" target="_blank">Send a Message</a><br/>
+                <a href="https://github.com/zerocordeiro" target="_blank">GitHub</a><br/>
+                <a href="https://linkedin.com/in/zerocordeiro" target="_blank">Linkedin</a><br/>
+                <a href="https://wa.me/5548999247118?text=Hello%2C+I%27d+like+to+schedule+a+meeting.+My+name+is%3A+" target="_blank">WhatsApp</a><br/>
+                </details>
                 <br/><br/><br/>
             </article>
         </section>
