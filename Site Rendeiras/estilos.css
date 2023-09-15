@@ -3,7 +3,9 @@
 @import url("Source_Sans_Pro/stylesheet.css");
 
 
-
+body{
+	margin:0;
+}
 
 #container {
 	float: none;
