@@ -152,11 +152,9 @@ main h2{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  /* width:100rem; */
   min-width: 400px;
   max-width: 1200px;
-  /* background-color: #dc143c88; */
-  /* overflow: visible; */
+
 }
 #skillstitle{
   margin-top: 100px;
