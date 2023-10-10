@@ -15,7 +15,7 @@ function PopUpImages({array}){
         }else if(indeximg<0){
             indeximg=imgurls.length-1 ;
         }
-        let novaimagem = document.getElementById('imgrendeiras');
+        let novaimagem = document.getElementById('imgdisplay');
         novaimagem.src=imgurls[indeximg];
         let contador=document.getElementById('presentationcounter');
         let counter = 'Showing '+ (indeximg+1) + ' / ' + imgurls.length; 
@@ -52,7 +52,7 @@ function PopUpImages({array}){
                     <div style={{borderRadius:10000, height:'30%',width:'10%',position:'absolute', left:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowleft})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(-1)}></div>
 
                     
-                    <img id='imgrendeiras' src={imgurls[indeximg]} style={{maxHeight:'95%', maxWidth:'95%', display:'block', margin:'auto auto auto auto'}}></img>
+                    <img id='imgdisplay' src={imgurls[indeximg]} style={{maxHeight:'95%', maxWidth:'95%', display:'block', margin:'auto auto auto auto'}}></img>
                     
 
                     <div style={{borderRadius:10000, height:'30%',width:'10%',position:'absolute', right:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowright})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(+1)}></div>
