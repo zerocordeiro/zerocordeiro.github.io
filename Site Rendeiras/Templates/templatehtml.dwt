@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Site rendeiras</title>
+<!-- TemplateEndEditable -->
+<link href="../estilos.css" rel="stylesheet" type="text/css">
+<link href="../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<script src="../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<div style="clear: both; height: 20px; width:100%; float:left; margin-left:0%; position:absolute; top:-1px; position:absolute; z-index: 9990; background:url(Imagens%20Home/barra_superior.jpg) no-repeat center;"></div>
+<body style="position:relative; top:0px;">
+<!-- TemplateBeginEditable name="ImagemTopo" -->
+<div onclick="location.href='Home1.html';" class="topo" id="topo">
+
+ 
+ 
+  <div  class="container_topo" id="container3">
+    <div id="botao_home">
+      <div class="botao_home" id="botao_home"></div>
+      <div class="botao_home_logo" id="botao_home"><img src="../Imagens Home/Site_04.png" width="203" height="86" alt="logo" longdesc="logotipo do site formado por bilros dispostos radialmente em uma forma circular semelhante a uma flor ou mandala" > </div>
+    </div>
+    		
+  </div>
+</div>
+
+<!-- TemplateEndEditable --><!-- fim do topo --><!-- TemplateBeginEditable name="ContainerTemp" -->
+<div class="container" id="container2">
+    <div class="conteudo" id="conteudo2"><!-- FIm da DIv para os tres blocos de links com imagens no topo -->
+      
+  </div>
+    <!-- fim do conteudo -->
+</div>
+  <!-- TemplateEndEditable --><!-- fim do container --><!-- fim do rendado -->
+    
+<div class="container" id="container">
+<div class="conteudo" id="conteudo">
+   
+
+    <!-- inicio da div box-->
+<div id='box'>
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li><a  href="../Historia.html">História</a>
+        <!--<ul>
+          <li><a href="#">Mundo</a></li>
+          <li><a href="#">Brasil</a></li>
+          <li><a href="#">Florianópolis</a></li>
+        </ul>-->
+      </li>
+      <li><a href="../Rendeiras.html" >As rendeiras</a>
+      </li>
+      <li><a  href="../Rendas.html">As rendas</a>
+      </li>
+      <li><a href="../Novidades.html">Novidades</a></li>
+      <li><a href="../Contato.html">Contato</a></li>
+    </ul>
+  </div>  
+  <!-- fim da div box -->
+  </div> <!-- fim da segunda div conteúdo -->
+</div> <!-- fim da segunda div container -->
+
+<div class="mapa_site" id="mapa_site">
+  <h3>Mapa do Site
+  </h3>
+  <div class="container" id="container">
+        <div class="mapa_item" id="mapa_item">
+          <h1>História</h1>
+          	<a href="Historia.html#cultura_acoriana">A cultura açoriana</a><br>
+			<a href="Historia.html#mundo">renda no mundo</a><br>
+            <a href="Historia.html#brasil">renda no brasil</a><br>
+            <a href="Historia.html#florianopolis">renda em florianópolis</a><br>
+        </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>As rendeiras</h1>
+            <a href="Rendeiras.html#sobre">sobre as rendeiras</a><br>
+			<a href="Rendeiras.html#lagoa">casarão da lagoa</a><br>
+            <a href="Rendeiras.html#sammbaqui">sambaqui</a><br>
+
+    </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>as rendas</h1>
+            <a href="Rendas.html#sobre">sobre as rendas</a><br>
+			<a href="Rendas.html#renda_tradicional">renda tradicional</a><br>
+            <a href="Rendas.html#renda_tramoia">renda tramóia</a><br>
+            <a href="Rendas.html#renda_maria_morena">renda maria morena</a><br>
+    </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>Novidades</h1>
+            <a href="Novidades.html#novidades">notícias</a><br>
+			<a href="Novidades.html#eventos">eventos</a><br>
+            <br>
+    </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>Contato</h1>
+            <a href="Contato.html#lagoa">Casarão da Lagoa</a><br>
+			<a href="Contato.html#sambaqui">Sambaqui</a><br>
+            <a href="#">Redes Sociais</a><br>
+
+    </div>
+	</div>
+          <div class="barra_fundo" id="barra_fundo">
+         	  <div class="container_fundo" id="container">
+					<p>Copyright </p>
+         	  </div>
+          </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+<!-- script pra rolar o menu junto da página-->
+  <script>
+window.onload = function() {
+  
+  function getScrollTop() {
+    if (typeof window.pageYOffset !== 'undefined' ) {
+      return window.pageYOffset;
+    }
+
+    var d = document.documentElement;
+    if (d.clientHeight) {
+      return d.scrollTop;
+    }
+    return document.body.scrollTop;
+  }
+
+  window.onscroll = function() {
+    var box = document.getElementById('box'),
+        scroll = getScrollTop();
+    
+    if (scroll <= 400) {
+      box.style.top = "400px";
+    }
+    else {
+      box.style.top = (scroll - 8) + "px";
+    }
+  };
+  
+};
+  </script>
+
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+
+<!-- fim do script pra rolar o menu junto da página-->
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- 3d parallax effect done purely with CSS as described in
+    https://keithclark.co.uk/articles/pure-css-parallax-websites/
+    Runs smoother than solutions done with javascript
+    -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        /* 
+        Styles for classes are taken directly from the tutorial. I added explanations to make my understanding easier, but the tutorial also has their own descriptions of what each parameter does. */
+        body{
+            margin:0px;
+            /* background-color: aquamarine; */
+            /* width:700px; */
+        }
+        .parallax {
+            /* margin:0px; */
+            perspective: 1px; /*this sets the size of the "steps" that will be used for the perspective when setting an element position with transform:tranlateZ(xxxpx); ( like in .parallax__layer--back
+            IMPORTANT: translateZ(##px) needs to be LOWER than perspective value, else the element will not show
+            */
+            height: 100vh;
+            /* Defining perspective and height  locks the perspective to this element's center
+            The height will make so that the div.parallax will occupy all the screen size, so it's scroll bar will be the website's scrollbar
+            One important thing to notice is that this will "fixate" the background color to the given height, so if you want to give a background color or static image you should put it in the <body> tag ajnd use div.parallax as a container for the ~whole website, minus background color or still image
+            */
+            overflow-x: hidden;
+            overflow-y: auto; /* needs to be set to "auto" for the effect to work*/
+            /*Added by me*/
+            /* background-color: aquamarine; */
+            /* end of Added by me*/
+        }
+        .parallax__layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .parallax__layer--base {
+            transform: translateZ(0px); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+            /* added by me */
+            /* background-color: rgba(241, 93, 93, 0.289); */
+            /* end of added by me */
+        }
+        .parallax__layer--back {
+            transform: translateZ(-1px) scale(2);
+            /*added by me*/
+            background-color: rgba(227, 126, 37, 0.418);
+            border-radius: 50%;
+            align-content: center;
+            text-align: center;
+            height:150px;
+            width:150px;
+            left:-200px;
+            top:120vh;
+            /* end of added by me  */
+        }
+        .parallax__layer--back-2 {
+            transform: translateZ(-2px) scale(4);/*translateZ will define the element's speed and scale will define it's size (elements far away will be smaller if not given a bigger scale)*/
+            /*added by me*/
+            background-color: rgba(198, 227, 37, 0.418);
+            border-radius: 10%;
+            align-content: center;
+            text-align: center;
+            height:150px;
+            width:500px;
+            left:20vh;
+            top:40vh;
+            z-index:1;
+            /* end of added by me  */
+        }
+        .parallax__layer--back-3 {
+            transform: translateZ(-5px) scale(6);
+            /*added by me*/
+            background-color: rgba(198, 227, 37, 0.418);
+            border-radius: 10%;
+            align-content: center;
+            text-align: center;
+            height:150px;
+            width:500px;
+            left:200px;
+            /* top:2000px; */
+            /* end of added by me  */
+        }
+        .parallax__group{
+            transform-style: preserve-3d; 
+            /* ^ this will make the group keep the parallax-related effects, like translateZ and scale*/
+            position: relative; 
+            /* ^ this doesn't seem to affect much, but will make so that the group is set relative to it's parent, which is the .parallax container, with the perspective and height parameters*/
+            min-height: 150px; 
+            /* ^ this was set arbitrarily in the tutorial because 
+                "In this example, I want each group to fill the viewport so I've set height: 100vh, however arbitrary values can be set for each group if required"
+              */
+            /* 
+                "transform-style: preserve-3d prevents the browser flattening the parallax__layer elements and position: relative is used to allow the child parallax__layer elements to be positioned relative to the group element."
+            */
+            /* Now this last one is a cool way to see what is happening during parallax. It will "rotate" the elements and make the page 3d-like */
+            /* transform: translate3d(700px, 0px, -10px) rotateY(0.3deg); */
+            /* ^ For this to work properly and show what's intended you need to set the perspective to something higher, like 10px or even more */
+            /* -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg); */
+            /* perspective:1px; */
+
+        }
+    </style>
+</head>
+<body>
+<div class="parallax">
+    <!--The classes for this div and childs is taken directly from the tutorial-->
+    <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+            <p>
+                Group 1...<br/>
+                Classes:<br/>
+                parallax__layer<br/>
+                parallax__layer--back
+            </p>
+        </div>
+        <div class="parallax__layer parallax__layer--base" >
+            <p style="border: 1px solid black;">
+                Group 10% Div Div Div <br/>Div Div Div Div Div Div Div Div Div Div Div <br/>Div Div Div Div Div Div Div Div Div <br/>Div <br/>Div Div Div Div Div Div Div Div Div Div Div Div Div Div
+            </p>
+        </div>
+    </div>
+
+    <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <p>
+                ...<br/>
+                Classes:<br/>
+                parallax__layer (same as the previous one)<br/>
+                parallax__layer--base<br/>
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678123456789012345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678123456712345
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>1234567812wehncfhsen74du 5yseu mw4iuw4u
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678-..-h0.0g809tglkengiuh
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678~~fçlehra0k34mhernhreaw
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>12345678123456789012345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678123456712345
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>1234567812wehncfhsen74du 5yseu mw4iuw4u
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678-..-h0.0g809tglkengiuh
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678~~fçlehra0k34mhernhreaw
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>12345678123456789012345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678123456712345
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>1234567812wehncfhsen74du 5yseu mw4iuw4u
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678-..-h0.0g809tglkengiuh
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678~~fçlehra0k34mhernhreaw
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>12345678123456789012345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678123456712345
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>1234567812wehncfhsen74du 5yseu mw4iuw4u
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678-..-h0.0g809tglkengiuh
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678~~fçlehra0k34mhernhreaw
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>12345678123456789012345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678123456712345
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>1234567812wehncfhsen74du 5yseu mw4iuw4u
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678-..-h0.0g809tglkengiuh
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678~~fçlehra0k34mhernhreaw
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+                <br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>12345678
+            
+            </p>
+        </div>
+        <div class="parallax__layer parallax__layer--back-2">
+            <p>
+                ...<br/>
+                Classes:<br/>
+                parallax__layer<br/>
+                parallax__layer--back-2
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+    
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8"/>
+        <style>
+            
+            body{
+                margin:0px;
+            }
+            .parallax__container{
+                margin:0px;
+                perspective: 1px;
+                height:100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            .parallax__layer {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .lvl0 {
+                transform:translateZ(0px);
+                height:100%;
+                z-index:2;
+            }
+            .sky-bg{
+                transform:translateZ(0px);
+                background:linear-gradient(cyan, pink, #0000aa);
+                height:200%;
+                z-index:0;
+            }
+            .lvl1 {
+                transform: translateZ(0px) scale(1); 
+                /*^this is the default position. Positive numbers don't work (or at least not in this example)*/
+                z-index:98;
+                background-color: green;
+
+            }
+            #mountain{
+                width:50%;
+                height:240%;
+                top:80%;
+                left:-20%;
+                border-radius: 50%;
+            }
+            #grass{
+                width:200%;
+                height:130%;
+                top:130%;
+                left:00%;
+                border-radius: 100%;
+                /* border:1px solid black; */
+            }
+            .lvl2 {
+                transform: translateZ(-1px) scale(2); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                z-index:95;
+            }
+            #areia{
+                height:50%;
+                width:100%;
+                top:170%;
+                background-color: darkorange;
+            }
+            #rock1{
+                background-color:rgb(79, 16, 69);
+                height:50px;
+                width:40px;
+                top:146%;
+                left:60%;
+                border-radius: 40%;
+            }
+            #rock2{
+                background-color: rgb(48, 66, 18);
+                height:50px;
+                width:40px;
+                top:150%;
+                left:66%;
+                border-radius: 40%;
+            }
+            .lvl3 {
+                transform: translateZ(-2px) scale(3); /*this is the default position. Positive numbers don't work (or at least not in this example)*/
+                z-index:80;
+                height:40%;
+                width:100%;
+                top:190%;
+                left:0px;
+                background-color:cyan;
+            }
+            .lvl4 {
+                transform: translateZ(-9px) scale(6); 
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                height:100%;
+                top:300%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: yellow;
+                z-index: 70;
+            }
+            .lvl5{
+                transform:translateZ(-4px) scale(5);
+                z-index:75;
+            }
+            #cloud1{
+                background-color: rgba(244,244,244,0.7);
+                height:7%;
+                width:18%;
+                top:-40%;
+                left:100%;
+                border-radius: 450%;
+            }
+            #cloud2{
+                background-color:  rgba(244,244,244,0.7);
+                height:8%;
+                width:36%;
+                top:1%;
+                left:260%;
+                border-radius: 40%;
+            }
+            #cloud3{
+                background-color: rgba(244,244,244,0.7);
+                height:7%;
+                width:21%;
+                top:01%;
+                left:-130%;
+                border-radius: 50%;
+            }
+            .lvl_upper{
+                transform:translateZ(0px) scale(1);
+                z-index:100;
+                height: 200%;
+                width:100%;
+                background-color: rgba(2, 21, 5, .7);
+                top:160%;
+                color:antiquewhite;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:30pt;
+                text-align: center;
+            }
+            .lvl_upper p{
+                display: inline-block;
+                vertical-align: middle;
+                padding:auto;
+            }
+            span{
+                height: 100%;
+                display:inline-block;
+                vertical-align: middle;
+            }
+            footer{
+                background-color: black;
+                width:100%;
+                height: 10px;
+                color: aliceblue;
+                font-size: 16pt;
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="parallax__container">
+            <div class="sky-bg"></div>
+            <div class="parallax__layer lvl0">
+
+            </div>
+            <div class="parallax__layer lvl1" id="mountain"></div>
+            <div class="parallax__layer lvl1" id="grass"></div>
+            <div class="parallax__layer lvl2" id="areia">
+            </div>
+            <div class="parallax__layer lvl2" id="rock1">
+            </div>
+            <div class="parallax__layer lvl2" id="rock2">
+            </div>
+
+            <div class="parallax__layer lvl3">
+
+            </div>
+            <div class="parallax__layer lvl4"></div>
+            <div class="parallax__layer lvl5" id="cloud1"></div>
+            <div class="parallax__layer lvl5" id="cloud2"></div>
+            <div class="parallax__layer lvl5" id="cloud3"></div>
+            <div class="parallax__layer lvl_upper">
+                <span></span>
+                <p>Have a nice day!</p>
+            </div>
+            <footer>
+                <p>lalalal</p>
+            </footer>
+        </div>
+    
+    </body>
+</html>

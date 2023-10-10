@@ -1,0 +1,347 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/templatehtml.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Site rendeiras</title>
+<!-- InstanceEndEditable -->
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- script e css para a rolagem da galeria de fotos das rendeiras -->
+<script src="java_galeria.js" type="text/javascript">
+</script>
+
+
+
+<link href="estilos_galeria.css" rel="stylesheet" type="text/css">
+
+
+
+<!-- script para mostrar o pop-up das fotos -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script> 
+        
+        <script type="text/javascript">
+            $(document).ready( function() {
+                $(".popup-open").click( function(e) {
+                    $("#popup:visible").hide(); //hide popup if it is open
+                    e.preventDefault(); // don't follow link
+                    $("#image-placeholder").attr("src", $(this).attr("href")); // replace image src with href from the link that was clicked
+                    $("#popup").fadeIn("fast"); //show popup
+                });
+                $("#popup-close").click( function(e) {
+                    e.preventDefault();
+                    $("#popup").fadeOut("fast");
+                });
+            });
+			</script>
+<!--fim do script para o pop-up das fotos -->
+<!--especifico pro pop-up-->
+
+<!-- fim do script e css pra galeria de fotos das rendeiras -->
+
+<link href="estilos.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<div style="clear: both; height: 20px; width:100%; float:left; margin-left:0%; position:absolute; top:-1px; position:absolute; z-index: 9990; background:url(Imagens%20Home/barra_superior.jpg) no-repeat center;"></div>
+<body style="position:relative; top:0px;">
+<!-- InstanceBeginEditable name="ImagemTopo" -->
+<div onclick="location.href='Home1.html';" class="topo" id="topo" style="background:url(Imagens%20Home/2_02.jpg) no-repeat center;">
+  <div class="container_topo" id="container3">
+    <div id="botao_home">
+      <div class="botao_home" id="botao_home"></div>
+      <div class="botao_home_logo" id="botao_home"><img src="Imagens%20Home/Site_04.png" width="203" height="86" alt="logo" longdesc="logotipo do site formado por bilros dispostos radialmente em uma forma circular semelhante a uma flor ou mandala" > </div>
+    </div>
+  </div>
+</div>
+<!-- InstanceEndEditable --><!-- fim do topo --><!-- InstanceBeginEditable name="ContainerTemp" -->
+<p>&nbsp;</p>
+<div class="container" id="container">
+  <h1 style="text-align:left; margin-bottom:10px;"><a id="sobre"></a>As Rendas</h1>
+  <div class="texto" id="texto">
+  
+  <p>A renda de bilros é uma atividade exercida em Florianó- polis desde o século 17 e é inegável a sua importância dentro do contexto cultural da cidade, sendo referência em qualquer citação sobre a capital do Estado de Santa Catarina, sempre aliada à colonização açoriana.
+Os bilros são pequenas bobinas de madeira, geralmente preparadas e torneadas pelos maridos ou por parentes das rendeiras. A madeira mais empregada para sua confecção é a rabo de macaco (Melaxonylon brauba). Quando novos, os bilros são opacos, mas, com o tempo, vão ficando brilhosos, como se fossem encerados, resultado da oleosidade das mãos durante o manuseio.
+Os bilros são manejados aos pares pela rendeira, em movimento rotativo.
+O pique ‒ molde ou gabarito utilizado com o desenho da renda desejada e aplicado na almofada ‒ geralmente é feito de papelão-couro, o preferido das rendeiras, mas também reaproveitam o papelão de caixas.</p>
+  
+<br>
+    <span class="texto">
+    <p>&nbsp;</p>
+  
+    </span>
+    </p>
+  </div>
+  <div class="imagem" id="imagem"><iframe width="100%" height="198px" src="http://www.youtube.com/embed/5eJ0pNpa-6A" frameborder="0" allowfullscreen></iframe></div>
+ 
+</div>
+<div class="container" id="container">
+<h1 style="text-align:left; margin-bottom:10px;">Tipos de Renda</h1>
+</div>
+
+
+<div class="container" id="container">
+  <h1 style="text-align:left; margin-bottom:10px;"><a id="renda_tradicional"></a>Tradicional</h1>
+  
+  <div class="texto" id="texto">
+    
+    <p>A renda tradicional permite criar desenhos complexos que misturam caminhos fechados e  tramas abertas. As peças variam de toalhas e descansos de panela até peças de vestuário e podem ser feitas de uma só vez ou em partes que depois são unidas com costura. Pode-se usar várias cores de linha na mesma peça, que é feita em etapas, separando-se por exemplo, o bordado de seu interior.</p>
+  </div>
+  <div class="imagem" id="imagem"></div>
+
+
+<div style="clear:both;">
+    	<div class="botao_esq" id="botao_scroll"> <a href="javascript: void(0);" onclick="scrollDiv1('l', 80); return false;"><img src="pixel_blank.png" width="100%" height="100%" alt="right" longdesc="right"></a> 
+        </div>
+            
+<div id="scroller1" class="scroller">
+	<div id="inner-scroller" style="width:880px;">
+<!-- div escondida do pop-up -->
+		<div id="popup" style="display:none">
+            <a style="color:#FFF; font-family:'Source Sans Pro', 'Source Sans Pro Black', 'Source Sans Pro ExtraLight', 'Source Sans Pro Light', 'Source Sans Pro Semibold';" id="popup-close" href="" class="button">Fechar</a><br>
+            <img id="image-placeholder" src="" width="100%" height="auto">
+		</div>
+<!-- fim da div escondida do pop-up -->
+
+        <a href="fotos_rendas/tradicional1.jpg" class="popup-open"><img src="fotos_rendas/tradicional1th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa1"></a>
+        
+        <a href="fotos_rendas/tradicional2.jpg" class="popup-open"><img src="fotos_rendas/tradicional2th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa1"></a>
+        
+        <a href="fotos_rendas/tradicional3.jpg" class="popup-open"><img src="fotos_rendas/tradicional3th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa3"></a>
+        
+        <a href="fotos_rendas/tradicional4.jpg" class="popup-open"><img src="fotos_rendas/tradicional4th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa4"></a> 
+        
+        <a href="fotos_rendas/tradicional5.jpg" class="popup-open"><img src="fotos_rendas/tradicional5th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa4"></a> 
+        
+	</div>
+</div>
+        
+        <div class="botao_dir" id="botao_scroll"> <a href="javascript: void(0);" onclick="scrollDiv1('r', 80); return false;"> <img src="pixel_blank.png" width="100%" height="100%" alt="right" longdesc="right"></a>
+        </div>
+    
+    </div>
+    
+    
+</div>
+
+
+
+<div class="container" id="container">
+  
+    <h1 style="text-align:left; margin-bottom:10px;"><a id="renda_tramoia"></a>Tramóia</h1>
+    <div class="texto" id="texto"><p>&nbsp;</p>
+    <p>O ponto tramóia é considerado um estilo típico da Ilha de Santa Catarina. É tecido com sete pares de bilros e geralmente com dois tipos de linha, uma fina e outra grossa. A linha fina transpassa de um lado a outro, entremeando a linha grossa, que compõe o desenho. Os desenhos em tramóia recebem nomes curiosos: trevo, quatro patas, corrupio, caracol, mãos, estrela, zigzag, tesoura, e outros. Antigamente era conhecida como &quot;puxada&quot;.</p>
+  </div>
+  <div class="imagem" id="imagem"></div>
+
+
+    <div style="clear:both;">
+    	<div class="botao_esq" id="botao_scroll"> <a href="javascript: void(0);" onclick="scrollDiv('l', 80); return false;"><img src="pixel_blank.png" width="100%" height="100%" alt="right" longdesc="right"></a> 
+        </div>
+            
+<div id="scroller" class="scroller">
+	<div id="inner-scroller" style="width:880px;">
+<!-- div escondida do pop-up -->
+        <div id="popup" style="display:none">
+            <a style="color:#FFF; font-family:'Source Sans Pro', 'Source Sans Pro Black', 'Source Sans Pro ExtraLight', 'Source Sans Pro Light', 'Source Sans Pro Semibold';" id="popup-close" href="" class="button">Fechar</a><br>
+            <img id="image-placeholder" src="" width="100%" height="auto">
+            
+        </div>
+<!-- fim da div escondida do pop-up -->
+		
+        <a href="fotos_rendas/tramoia1.jpg" class="popup-open"><img src="fotos_rendas/tramoia1th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa1"></a>
+        
+        <a href="fotos_rendas/tramoia2.jpg" class="popup-open"><img src="fotos_rendas/tramoia2th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa1"></a>
+        
+        <a href="fotos_rendas/tramoia3.jpg" class="popup-open"><img src="fotos_rendas/tramoia3th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa3"></a>
+        
+        <a href="fotos_rendas/tramoia4.jpg" class="popup-open"><img src="fotos_rendas/tramoia4th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa4"></a> 
+        
+        <a href="fotos_rendas/tramoia5.jpg" class="popup-open"><img src="fotos_rendas/tramoia5th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa4"></a> 
+        
+        
+	</div>
+</div>
+        
+        <div class="botao_dir" id="botao_scroll"> <a href="javascript: void(0);" onclick="scrollDiv('r', 80); return false;"> <img src="pixel_blank.png" width="100%" height="100%" alt="right" longdesc="right"></a>
+        </div>
+    
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="container" id="container">
+  <h1 style="text-align:left; margin-bottom:10px;"><a id="renda_maria_morena"></a>Maria Morena</h1>
+  
+  <div class="texto" id="texto">
+    
+    <p>A maria morena ou miudeira é uma renda comum no Ceará, trabalhada em quadros que depois são emendados e fechados com uma barra bordada ou feita também com bilros. É comumente usada em trilhos, toalhas, jogos e colchas.</p>
+  </div>
+  <div class="imagem" id="imagem"></div>
+
+
+<div style="clear:both;">
+    	<div class="botao_esq" id="botao_scroll"> <a href="javascript: void(0);" onclick="scrollDiv2('l', 80); return false;"><img src="pixel_blank.png" width="100%" height="100%" alt="right" longdesc="right"></a> 
+        </div>
+            
+<div id="scroller2" class="scroller">
+	<div id="inner-scroller" style="width:880px;">
+<!-- div escondida do pop-up -->
+		<div id="popup" style="display:none">
+            <a style="color:#FFF; font-family:'Source Sans Pro', 'Source Sans Pro Black', 'Source Sans Pro ExtraLight', 'Source Sans Pro Light', 'Source Sans Pro Semibold';" id="popup-close" href="" class="button">Fechar</a><br>
+            <img id="image-placeholder" src="" width="100%" height="auto">
+		</div>
+<!-- fim da div escondida do pop-up -->
+
+        <a href="fotos_rendas/maria_morena1.jpg" class="popup-open"><img src="fotos_rendas/maria_morena1th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa1"></a>
+        
+        <a href="fotos_rendas/maria_morena2.jpg" class="popup-open"><img src="fotos_rendas/maria_morena2th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa1"></a>
+        
+        <a href="fotos_rendas/maria_morena1.jpg" class="popup-open"><img src="fotos_rendas/maria_morena3th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa3"></a>
+        
+        <a href="fotos_rendas/maria_morena1.jpg" class="popup-open"><img src="fotos_rendas/maria_morena4th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa4"></a> 
+        
+        <a href="fotos_rendas/maria_morena5.jpg" class="popup-open"><img src="fotos_rendas/maria_morena5th.jpg" width="170" height="170" alt="lagoa1" longdesc="lagoa4"></a> 
+        
+	</div>
+</div>
+        
+        <div class="botao_dir" id="botao_scroll"> <a href="javascript: void(0);" onclick="scrollDiv2('r', 80); return false;"> <img src="pixel_blank.png" width="100%" height="100%" alt="right" longdesc="right"></a>
+        </div>
+    
+    </div>
+    
+    
+</div>
+
+
+<!-- InstanceEndEditable --><!-- fim do container --><!-- fim do rendado -->
+    
+<div class="container" id="container">
+<div class="conteudo" id="conteudo">
+   
+
+    <!-- inicio da div box-->
+<div id='box'>
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li><a  href="Historia.html">História</a>
+        <!--<ul>
+          <li><a href="#">Mundo</a></li>
+          <li><a href="#">Brasil</a></li>
+          <li><a href="#">Florianópolis</a></li>
+        </ul>-->
+      </li>
+      <li><a href="Rendeiras.html" >As rendeiras</a>
+      </li>
+      <li><a  href="Rendas.html">As rendas</a>
+      </li>
+      <li><a href="Novidades.html">Novidades</a></li>
+      <li><a href="Contato.html">Contato</a></li>
+    </ul>
+  </div>  
+  <!-- fim da div box -->
+  </div> <!-- fim da segunda div conteúdo -->
+</div> <!-- fim da segunda div container -->
+
+<div class="mapa_site" id="mapa_site">
+  <h3>Mapa do Site
+  </h3>
+  <div class="container" id="container">
+        <div class="mapa_item" id="mapa_item">
+          <h1>História</h1>
+          	<a href="Historia.html#cultura_acoriana">A cultura açoriana</a><br>
+			<a href="Historia.html#mundo">renda no mundo</a><br>
+            <a href="Historia.html#brasil">renda no brasil</a><br>
+            <a href="Historia.html#florianopolis">renda em florianópolis</a><br>
+        </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>As rendeiras</h1>
+            <a href="Rendeiras.html#sobre">sobre as rendeiras</a><br>
+			<a href="Rendeiras.html#lagoa">casarão da lagoa</a><br>
+            <a href="Rendeiras.html#sammbaqui">sambaqui</a><br>
+
+    </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>as rendas</h1>
+            <a href="Rendas.html#sobre">sobre as rendas</a><br>
+			<a href="Rendas.html#renda_tradicional">renda tradicional</a><br>
+            <a href="Rendas.html#renda_tramoia">renda tramóia</a><br>
+            <a href="Rendas.html#renda_maria_morena">renda maria morena</a><br>
+    </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>Novidades</h1>
+            <a href="Novidades.html#novidades">notícias</a><br>
+			<a href="Novidades.html#eventos">eventos</a><br>
+            <br>
+    </div>
+          <div class="mapa_item" id="mapa_item">
+            <h1>Contato</h1>
+            <a href="Contato.html#lagoa">Casarão da Lagoa</a><br>
+			<a href="Contato.html#sambaqui">Sambaqui</a><br>
+            <a href="#">Redes Sociais</a><br>
+
+    </div>
+	</div>
+          <div class="barra_fundo" id="barra_fundo">
+         	  <div class="container_fundo" id="container">
+					<p>Copyright </p>
+         	  </div>
+          </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+<!-- script pra rolar o menu junto da página-->
+  <script>
+window.onload = function() {
+  
+  function getScrollTop() {
+    if (typeof window.pageYOffset !== 'undefined' ) {
+      return window.pageYOffset;
+    }
+
+    var d = document.documentElement;
+    if (d.clientHeight) {
+      return d.scrollTop;
+    }
+    return document.body.scrollTop;
+  }
+
+  window.onscroll = function() {
+    var box = document.getElementById('box'),
+        scroll = getScrollTop();
+    
+    if (scroll <= 400) {
+      box.style.top = "400px";
+    }
+    else {
+      box.style.top = (scroll - 8) + "px";
+    }
+  };
+  
+};
+  </script>
+
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+
+<!-- fim do script pra rolar o menu junto da página-->
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zerocordeiro's webpage</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:auto;
+            padding:0px;
+            /* background-color: #fffaf4; */
+            /* background-image: linear-gradient(#fffaf4,#fffaf4,#fffaf4,#fffaf4,#f7911d18); */
+            /* background-image: linear-gradient(#fffaf4,#f7911d18,#f7911d18,#f7911d18,#f7911d18,#f7911d18,#f7911d18,#f7911d18); */
+            background-color:#121212;
+            min-height:100vh;
+        }
+
+        div.parallax__container{
+            perspective:200px;
+            perspective-origin: center;
+            height:100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .parallax__layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+            
+        div.conteudo{
+            /* transform: translateZ(0px);
+            display:block;
+            margin: auto; */
+            transform-style: preserve-3d;
+            position:relative;
+        }
+        header{
+            margin:auto;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size:1.2em;
+            line-height: 1.2em;
+            color:whitesmoke;
+            font-weight:lighter;
+        }
+        header h1 webname{
+            font-variant: small-caps;
+            font-size: 1.9em;
+            font-weight:lighter;
+        }
+
+        nav{
+            width: 100%;
+            height:30vh;
+            min-height:280px;
+            /* flex-direction: row; */
+            /* align-items: center; */
+            /* justify-content: center; */
+            /* flex-wrap: wrap; */
+            background-color:#00a79def;
+            overflow: hidden;
+            /* background-image: url(_images/foto_1000.png);
+            background-repeat: no-repeat;
+            background-size: 25%;
+            background-attachment: fixed ; */
+            transform-style: preserve-3d;
+            position:relative;
+        }
+        nav section{
+            width:50%;
+            height:inherit;
+            float:left;
+            position:relative;
+        }
+        section#nav_image{
+            position:absolute;
+            transform: translateZ(-10);
+            overflow:hidden;
+            max-width:30%;
+            min-width:30vh;
+            height:30vh;
+            min-height: 280px;
+            background-image: url(_images/foto_1000.png);
+            /* background-color: #fc2323b9; */
+            background-repeat: no-repeat;
+            background-position:0px 100px;
+            background-size: 30%;
+            background-attachment:fixed;
+            filter:grayscale(95%);
+        }
+        p#presentation{
+            float:right;
+            text-align: right;
+            margin:30px;
+            max-width:220px;
+            min-width:160px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            line-height: 1.4em;
+            color:#fefefe;
+            /* font-variant:small-caps; */
+            
+        }
+        p#presentation::selection{
+            background-color: #eb5761;
+            color:black;
+            font-weight: 100;
+        }
+        *::selection{
+            background-color: #eb5761;
+            color:black;
+        }
+        .flex{
+            height:100%;
+            display:flex;
+            flex-wrap: wrap;
+            /* flex-direction: row; */
+            justify-content: center;
+            align-items: stretch;
+        }
+        nav section article.navegacao{
+            flex:auto;
+            display: flex;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background-color: #fefefeee;
+            text-align:center;
+            vertical-align: middle;
+            justify-content: space-around;
+            margin:10px;
+            border-radius: 5px;
+            min-width:150px;
+            box-shadow: 2px 2px 3px #999999;
+            transition: width 1s transform 1s;
+        }
+        article.navegacao p{
+            position: absolute;
+            margin:auto;
+        }
+        article.navegacao a{
+            line-height: normal;
+            font-size: 1.2em;
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: none;
+            /* display:none; */
+            transition: display 1s height 1s;
+            font-weight: bolder;
+            color:rgba(0, 0, 0, 0);
+        }
+        nav section article.navegacao:hover a{
+            display:block;
+            color:rgb(12, 121, 12);
+            z-index:2;
+        }
+        nav section article span{
+            display:inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+        nav section article.navegacao:hover p{
+            color:rgba(0,0,0,0);
+            /* width:100%; */
+            /* transform: translate(-5px,-5px); */
+            /* font-weight: bolder; */
+            /* font-size: 1.2rem; */
+            line-height: 1em;
+
+        }
+
+        /* article#bubble1{
+            
+        }
+        article#bubble2{
+        }
+        article#bubble3{
+        } */
+
+        h2{
+            text-align: center;
+            background-color: #aeaeae;
+            overflow-x: visible;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        main{
+            width:70%;
+            margin:auto;
+            display:flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            /* min-height: 90%; */
+            justify-content: center;
+            /* background-color: #ffe4c4a9; */
+        }
+        p#smallnote{
+            width:100%;
+            color: #eb5761;
+            text-align: right;
+            margin:0px;
+            margin-top:10px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 0.9rem;
+        }
+        main section{
+            /* flex: 200px; */
+            /* background-color: aquamarine; */
+            padding:5px;
+        }
+
+        details.details_main{
+            background-color: #fffaf4f1;
+            /* background-color: black; */
+            margin:15px;
+            padding:10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            
+            line-height: 2rem;
+            display:block;
+            box-shadow: 0px 0px 5px #00a79d;
+            border-bottom: 1px solid #00a79d;
+            border-left: 1px solid #00a79d;
+            color: #00726a;
+            transition: open 1s;
+            border-radius: 2%;
+        }
+        
+        details.details_main summary{
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        details.details_main[open]{
+            /* background-image: linear-gradient(#00a79d, white); */
+            /* background-color: inherit; */
+            border: none;
+            /* margin-bottom: 30px; */
+        }
+        /* details.details_main[open] summary{
+            color:red;
+        } */
+        
+        article details p, article details ul, article details li details.details_sub summary{
+            letter-spacing: 0px;
+            line-height: 3rem;
+            text-align: left;
+            font-size: 1.5rem;
+            font-variant: normal;
+            font-weight: normal;
+        }
+        article details p{ /*section#i_education article details p */
+            /* margin:0px; */
+            /* background-color: aquamarine; */
+            padding: 5px;
+            margin-bottom:0px;
+        }
+        article details ul{
+            /* background-color: aquamarine; */
+            margin-top:0px;
+            padding-bottom: 5px;
+        }
+        details.details_main summary, p.itens{
+            /* display:block; */
+            list-style:none;
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2rem;
+            font-weight:bold;
+            font-variant: small-caps;
+        }
+
+        p.itens{
+            margin:5px;
+        }
+
+        #contact{
+            text-align: center;
+            min-width:360px;
+        }
+        #contact a, #contact p{
+            line-height: 2em;
+            text-align: center;
+        }
+
+        footer{
+            background-color: #1b1b1b;
+            color:#fefefe;
+            align-content: center;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.9em;
+            padding: 0.5em;
+
+        }
+        div#bg-div{
+            z-index: -100;
+        }
+        div.decor{
+            /* background-color: #f7931d; */
+            border:whitesmoke solid;
+            border-radius: 50%;
+            position: absolute;
+            z-index:-100;
+        }
+        div#decor1{
+            border-radius: 36% 64% 70% 30% / 69% 24% 76% 31%  ;
+            transform: translateZ(150px) scale(.2);
+            aspect-ratio: 1/1;
+            width:100px;
+            left:55%;
+            top:50%; 
+            /* ^trocar o top para 60% para jogar o elemento para o fundo da página*/
+            z-index:-100;
+        }
+        div#decor2{
+            border-radius: 57% 43% 77% 23% / 72% 69% 31% 28% ;
+            transform: translateZ(-300px) scale(5);
+            height:50px;
+            width:50px;
+            left:-20%;
+            top:600px;
+        }
+        div#decor3{
+            border-radius: 46% 54% 36% 64% / 22% 24% 76% 78% ;
+            transform: translateZ(100px) scale(.2);
+            aspect-ratio: 1/1;
+            width:100px;
+            left:25%;
+            top:40%;
+            z-index:-100;
+        }
+        div#decor4{
+            border-radius: 52% 48% 78% 22% / 85% 37% 63% 15% ;
+            transform: translateZ(-200px) scale(2);
+            aspect-ratio: 1/1;
+            width:100px;
+            left:-25%;
+            top:-40%;
+            z-index:-100;
+        }
+        .bordas{
+            border:rgb(128, 26, 26) solid;
+            border-top:none;
+            border-bottom: none;
+            position: absolute;
+            z-index:3;
+            margin:0 auto;
+        }
+        #borda1{
+            transform: translateZ(190px) translateX(50%) rotateX(1deg) scale(0.2);
+            width:5%;
+            height:100%;
+        }
+    </style>
+</head>
+ <body>
+<div class="parallax__container" id="bg-div">
+        <div class="decor parallax__layer" id="decor1"></div>
+        <div class="decor parallax__layer" id="decor2"></div>
+        <div class="decor parallax__layer" id="decor3"></div>
+        <div class="decor parallax__layer" id="decor4"></div>
+        <!-- <div class="decor parallax__layer" id="decor5"></div> -->
+        <!-- <div class="decor parallax__layer" id="decor6"></div> -->
+        <!-- <div class="decor parallax__layer" id="decor7"></div> -->
+        <!-- <div class="decor parallax__layer" id="decor8"></div> -->
+        <div class="bordas parallax__layer" id="borda1"></div>
+
+    <div class="conteudo">
+    <header>
+        <article>
+            <h1><webname>Zerocordeiro's</webname><br/>webpage</h1>
+        </article>
+    </header>
+    <nav>
+            <!--
+                
+                Presentation
+            
+            -->
+            <section id="nav_image"></section>
+        <section>
+            <p id="presentation">Hi, I'm José Cordeiro.<br/>
+                I'm creating solutions and great experiences for the web. <br/><br/>
+                
+                Let's work together!<br/>
+                Learn more about me on this page and get in touch.</p>
+        </section>
+            <!--
+                
+                Bubbles
+            
+            -->
+
+        <section class="flex">
+            <article class="navegacao" id="bubble1">
+                <!-- <span></span> -->
+                <p>1in</p>
+                <a href="" target="_blank">1in</a>
+            </article>
+            <article class="navegacao" id="bubble2">
+                <p>2github</p>
+                <a href="" target="_blank">2github</a>
+            </article>
+            <article class="navegacao" id="bubble3">
+                <p>3Contact</p>
+                <a href="" target="_blank">3Contact</a>
+            </article>
+        </section>
+        
+    </nav>
+    <main>
+        <p id="smallnote">-- Collapse All --</p>
+        <section>
+            
+            <article>
+                
+                            <!--
+                
+                FRONT-END WEB DEV
+            
+            -->
+
+                <details class="details_main" id="frontend" open="open"> <!--remover depois este atributo "open"-->
+                    <summary>Front-end web development</summary>
+                    <p>Main languages:</p>
+                    <ul class="lista">
+                        <li>Html5</li>
+                        <li>CSS3 - Dynamic CSS</li>
+                        <li>Javascript</li>
+                        <li><details class="details_sub" open="open"><summary>Javascript</summary>
+                            <!-- <p>descrição do item</p></details> -->
+                        </li>
+                        <li><details class="details_sub" open="open"><summary>Javascript</summary>
+                            <!-- <p>descrição do item</p></details> -->
+                        </li>
+                    </ul>
+                </details>
+            </article>
+            <article>
+                <details class="details_main" id="designer">
+                    <summary>Design</summary>
+                    <p>
+                        User-oriented<br/>
+                        Print and Web<br/>
+                        Design Thinking<br/>
+                        Main digital tools:
+                    </p>
+                    <ul>
+                        <li>Illustrator</li>
+                        <li>Photoshop</li>
+                        <li>InDesign</li>
+                        <li>Clip Studio</li>
+                    </ul>
+                </details>
+            </article>
+            <article>
+                <details class="details_main" id="moreinfo" open>
+                    <summary>More info</summary>
+                    <p>Education</p>
+                </details>
+            </article>
+        </section>
+        <section id="contact">
+            <article>
+                <details class="details_main" open="open">
+                <summary>Contact/Links</summary>
+                <p>José R Cordeiro</p>
+                
+                <a href="" target="_blank">Send a Message</a><br/>
+                <a href="https://github.com/zerocordeiro" target="_blank">GitHub</a><br/>
+                <a href="https://linkedin.com/in/zerocordeiro" target="_blank">Linkedin</a><br/>
+                <a href="https://wa.me/5548999247118?text=Hello%2C+I%27d+like+to+schedule+a+meeting.+My+name+is%3A+" target="_blank">WhatsApp</a><br/>
+                </details>
+                <br/><br/><br/>
+            </article>
+        </section>
+    </main>
+</div>
+    <footer>
+Copyright &copy 2023; José R Cordeiro
+    </footer>
+  
+  </div>
+  </body>
+</html>
