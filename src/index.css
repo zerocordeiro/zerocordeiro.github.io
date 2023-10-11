@@ -91,6 +91,10 @@ div.presentationtext{
   min-width: 300px;
   margin:10px auto auto auto;
   line-height: 1.2;
+  transition:  opacity 0.3s;
+}
+.presentationtext:hover{
+  opacity: 0.2;
 }
 
 .presentationtext p{
@@ -174,7 +178,12 @@ main h2{
   color:#24242400;
   text-align: center;
   justify-content: center;
+  transition: transform .3s; /*Animation for hover*/
 }
+.skillsitem:hover{
+  transform:scale(1.05);
+}
+
 
 #skillhtml5{
   background-image: url(./assets/HTML5_Logo.svg);

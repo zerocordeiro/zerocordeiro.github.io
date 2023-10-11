@@ -10,6 +10,13 @@ let imagensrenda=[
     'https://i.imgur.com/HQbAMxp.jpg',
     'https://i.imgur.com/b3drtMl.jpg'
 ];
+let imagensrestazero=[
+    'https://i.imgur.com/wzKIpBU.png',
+    'https://i.imgur.com/TtogsQa.png',
+    'https://i.imgur.com/aWDswR2.png',
+    'https://i.imgur.com/nGZlzRe.png',
+    'https://i.imgur.com/0DaktGF.png'
+];
 
 function MainContent(){
     return(
@@ -35,7 +42,8 @@ function MainContent(){
                     <details className="maindetails" >
                         <summary>Resta-Zero</summary>
                         <p>
-                            A browser-based "Lights Out" style game made with React. <br />
+                            A browser-based "Lights Out" style game made with React. <br /><br />
+                            <PopUpImages id="imgrz" array={imagensrestazero} /> <br />
                             <a href="https://zerocordeiro.github.io/resta-zero/" target="_blank">Click here and check it now!</a> <br /><sup>(opens in new tab)</sup> <br />
                             <a href="https://github.com/zerocordeiro/resta-zero" target="_blank">See code on github.</a>
                         
@@ -46,7 +54,7 @@ function MainContent(){
                         <p>
                             Website concept for a group of artisans.
                         </p>
-                        <PopUpImages 
+                        <PopUpImages id="imgr"
                         array={imagensrenda}/>
                     </details>
                     <details className="maindetails" >
@@ -90,7 +98,13 @@ function MainContent(){
                     <details className="experiencedetails" >
                         <summary>Tutoring</summary>
                         <p>
-                            I've been a teaching assistant working with groups of elderly where we've 
+                            I've been a teaching assistant and tutor in classes dealing with digital literacy for the elderly, encompassing:
+                            <ul>
+                                <li>Digital media introduction;</li>
+                                <li>Internet browsing and safety;</li>
+                                <li>Working with colaborative tools;</li>
+                                <li>Media manipulation and creation.</li>
+                            </ul>  
                         </p>
                     </details>
                     
@@ -99,7 +113,7 @@ function MainContent(){
                         <p style={{textAlign:'left',paddingBottom:0,}}>
                         In my previous role, I thrived in a dynamic office environment where adaptability was key. Working alongside diverse teams and facing ever changing challenges without a set routine made me hone my problem-solving skills and embrace the fast-paced nature of modern workspaces. </p>
                         <p style={{textAlign:'left',paddingBottom:0,paddingTop:0}}>
-                        Furthermore, as the main responsible for my department I restructured it, streamlining workflows and designing tools that significantly enhanced tracking tasks.
+                        Furthermore, as the main responsible for my department, I restructured it, streamlining workflows and designing tools that significantly enhanced tracking tasks.
                         </p>
                         <p style={{textAlign:'left',paddingTop:0}}>
                         My passion for technology and my ability to optimize processes make me a valuable candidate for IT-related positions.

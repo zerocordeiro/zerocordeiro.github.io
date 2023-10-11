@@ -15,15 +15,17 @@ function PopUpImages({array}){
         }else if(indeximg<0){
             indeximg=imgurls.length-1 ;
         }
-        let novaimagem = document.getElementById('imgdisplay');
+        let novaimagem = document.getElementById('imgdisplay'+imgurls[0]);
         novaimagem.src=imgurls[indeximg];
-        let contador=document.getElementById('presentationcounter');
+        let contador=document.getElementById(imgurls[1]);
         let counter = 'Showing '+ (indeximg+1) + ' / ' + imgurls.length; 
         contador.innerHTML = counter;
         console.log('posição do array: '+indeximg+', tamanho do array original: '+array.length+'. Conteúdo da posição do array original: '+ array[indeximg]+'.  Cnteúdo da posição do array copiado: '+imgurls[indeximg]);
     }
     function presentationOpenClose(){
-        let presentation=document.getElementById('popupdiv');
+        // indeximg=0;
+        // novaimagem.src='';
+        let presentation=document.getElementById(imgurls[0]);
         if(presentation.className=='popupdiv'){
             presentation.className='hiddendiv';
         } else if(presentation.className=='hiddendiv'){
@@ -33,8 +35,8 @@ function PopUpImages({array}){
 
     return(
         <>
-            <div className="hiddendiv" id="popupdiv">
-                <div className="popupinside" id='imagensrendeiras' style={{display:'flex',}}>
+            <div className="hiddendiv" id={imgurls[0]} itemID={imgurls[0]}>
+                <div className="popupinside" style={{display:'flex',}}>
                     <div style={
                     {
                         aspectRatio:1,height:'7%',
@@ -52,12 +54,12 @@ function PopUpImages({array}){
                     <div style={{borderRadius:10000, height:'30%',width:'10%',position:'absolute', left:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowleft})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(-1)}></div>
 
                     
-                    <img id='imgdisplay' src={imgurls[indeximg]} style={{maxHeight:'95%', maxWidth:'95%', display:'block', margin:'auto auto auto auto'}}></img>
+                    <img id={'imgdisplay'+imgurls[0]} src={imgurls[indeximg]} style={{maxHeight:'95%', maxWidth:'95%', display:'block', margin:'auto auto auto auto'}}></img>
                     
 
                     <div style={{borderRadius:10000, height:'30%',width:'10%',position:'absolute', right:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowright})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(+1)}></div>
                 </div>
-                <p id="presentationcounter" style={{position:'absolute',bottom:0,right:20, fontSize:'1em',fontWeight:'bold',padding:'0 5px 0 5px',backgroundColor:'#deeeeeee',borderRadius:1000}}>
+                <p id={imgurls[1]} style={{position:'absolute',bottom:0,right:20, fontSize:'1em',fontWeight:'bold',padding:'0 5px 0 5px',backgroundColor:'#deeeeeee',borderRadius:1000}}>
                     Showing {indeximg+1} / {imgurls.length}
                 </p>
             </div>
