@@ -24,7 +24,7 @@ body {
   margin: 0;
   /* display: flex; */
   place-items: center;
-  min-width: 320px;
+  min-width: 250px;
   min-height: 100vh;
   background-image: url(./assets/icon-site-white-lines-01.svg);
   background-color:#213547;
@@ -33,6 +33,7 @@ body {
   background-size: 100%;
   background-blend-mode:color-dodge;
   background-attachment:fixed;
+  background-position: center;
 }
 
 
@@ -67,6 +68,7 @@ h1.headertitle{
 
 h2{
   font-size:2.3em;
+  line-height: 1.9em;
   margin-bottom: 10px;
   background-color:#eb5761;
   background-image: url(./assets/icon-site-black-lines-01.svg);
@@ -75,8 +77,15 @@ h2{
   background-size: 100%;
   background-blend-mode:color-burn;
   background-attachment:fixed;
+  background-position: center;
   color:aliceblue
 }
+h3{
+  font-size: 1.5em;
+  text-decoration-line: underline;
+  margin-bottom: 0px;
+}
+
 small{
   font-size:0.5em;
   line-height:1;
@@ -136,10 +145,13 @@ main{
 
 main h2{
   border-radius: 10000px;
-  width:90%;
+  width:60%;
+  min-height: 2em;
+  text-align: center;
   margin-left: auto;
   margin-right:auto;
   margin-top:80px;
+  margin-bottom: 20px;
 }
 
 .maincontainer{
@@ -147,7 +159,6 @@ main h2{
   max-width: 800px;
   min-width: 400px;
   margin:auto auto auto auto;
-  text-align: center;
 }
 
 #skillscontainer{
@@ -197,8 +208,8 @@ main h2{
 #skillreact{
   background-image: url(./assets/react.svg);
 }
-#skillillustrator{
-  background-image: url(./assets/Adobe_Illustrator_CC_icon.svg);
+#skilladobe{
+  background-image: url(./assets/Adobe_icon.svg);
 }
 
 details{
@@ -261,7 +272,10 @@ footer{
   font-weight: bold;
   border:none;
   box-shadow: 1px 1px 5px black;
-  
+  transition: transform 0.2s;
+}
+.slideshowbutton:hover{
+  transform: scale(1.10);
 }
 .popupdiv{
   position:fixed;

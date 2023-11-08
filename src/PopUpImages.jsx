@@ -51,13 +51,13 @@ function PopUpImages({array}){
                         
                     </div>
 
-                    <div style={{borderRadius:10000, height:'30%',width:'10%',position:'absolute', left:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowleft})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(-1)}></div>
+                    <div style={{borderRadius:10000, height:'30%', maxHeight:'150px', minHeight:'50px' ,aspectRatio:'2/5',position:'absolute', left:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowleft})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}}  onClick={()=>moveIMG(-1)}></div>
 
                     
                     <img id={'imgdisplay'+imgurls[0]} src={imgurls[indeximg]} style={{maxHeight:'95%', maxWidth:'95%', display:'block', margin:'auto auto auto auto'}}></img>
                     
 
-                    <div style={{borderRadius:10000, height:'30%',width:'10%',position:'absolute', right:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowright})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(+1)}></div>
+                    <div style={{borderRadius:10000, height:'30%', maxHeight:'150px', minHeight:'50px' ,aspectRatio:'2/5',position:'absolute', right:-10, top:'35%',backgroundColor:'#12121266',backgroundImage:`url(${arrowright})`,backgroundRepeat:'no-repeat',backgroundSize:'70%',backgroundPosition:'center'}} onClick={()=>moveIMG(+1)}></div>
                 </div>
                 <p id={imgurls[1]} style={{position:'absolute',bottom:0,right:20, fontSize:'1em',fontWeight:'bold',padding:'0 5px 0 5px',backgroundColor:'#deeeeeee',borderRadius:1000}}>
                     Showing {indeximg+1} / {imgurls.length}

@@ -17,6 +17,32 @@ let imagensrestazero=[
     'https://i.imgur.com/nGZlzRe.png',
     'https://i.imgur.com/0DaktGF.png'
 ];
+let imagensstampet=[
+    'https://i.imgur.com/mJ1ouOs.png',
+    'https://i.imgur.com/sjSvT6L.png',
+    'https://i.imgur.com/2upZ6Tz.png',
+    'https://i.imgur.com/NeDrDpZ.png',
+    'https://i.imgur.com/aArLYIj.png',
+    'https://i.imgur.com/PMeKTrt.png',
+    'https://i.imgur.com/V58KWsQ.png',
+    'https://i.imgur.com/19mLzB4.png',
+    'https://i.imgur.com/UBVYgIL.png',
+    'https://i.imgur.com/Gpe1bwr.jpg',
+    'https://i.imgur.com/4ES0Ikk.jpeg'
+];
+let imagensim=[
+    'https://imgur.com/AjFlVXy.jpg',
+    'https://imgur.com/GHaWRhx.jpg',
+    'https://imgur.com/6VF7h7O.jpg',
+    'https://imgur.com/6FYQmno.jpg',
+    'https://imgur.com/i6c1gXD.jpg',
+    'https://imgur.com/6ALUUKL.jpg'
+];
+let imagensinfodesign=[
+    'https://imgur.com/dd8lMoP.png',
+    'https://imgur.com/5rHR5yt.png',
+    'https://imgur.com/ncESXny.png'
+];
 
 function MainContent(){
     return(
@@ -28,41 +54,7 @@ function MainContent(){
                     <div className="skillsitem" id="skillcss3">CSS3</div>
                     <div className="skillsitem" id="skilljavascript">Javascript</div>
                     <div className="skillsitem" id="skillreact">React</div>
-                    <div className="skillsitem" id="skillillustrator">Illustrator</div>
-                </div>
-            </section>
-
-            <section>
-                <h2>Portfolio</h2>
-                <div id="portfoliocontainer" className="portfoliocontainer maincontainer">
-                    <details className="maindetails" >
-                        <summary>GitHub</summary>
-                        <p><a href="https://github.com/zerocordeiro/" target="_blank">Click here to go to my GitHub page</a> <br /><sup>(opens in new tab).</sup></p>
-                    </details>
-                    <details className="maindetails" >
-                        <summary>Resta-Zero</summary>
-                        <p>
-                            A browser-based "Lights Out" style game made with React. <br /><br />
-                            <PopUpImages id="imgrz" array={imagensrestazero} /> <br />
-                            <a href="https://zerocordeiro.github.io/resta-zero/" target="_blank">Click here and check it now!</a> <br /><sup>(opens in new tab)</sup> <br />
-                            <a href="https://github.com/zerocordeiro/resta-zero" target="_blank">See code on github.</a>
-                        
-                        </p>
-                    </details>
-                    <details className="maindetails" >
-                        <summary>Renda Floripa</summary>
-                        <p>
-                            Website concept for a group of artisans.
-                        </p>
-                        <PopUpImages id="imgr"
-                        array={imagensrenda}/>
-                    </details>
-                    <details className="maindetails" >
-                        <summary>Design</summary>
-                        <p>
-                            Graphic Design and Visual Communication.
-                        </p>
-                    </details>
+                    <div className="skillsitem" id="skilladobe">Adobe suite</div>
                 </div>
             </section>
 
@@ -77,8 +69,7 @@ function MainContent(){
                     <details className="experiencedetails" >
                         <summary>Front-End Development</summary>
                         <p>
-                            Experience as junior developer writing websites and web apps with HTML, CSS and Javascript as well as its libraries such as React. <br /><br />
-                            This website was made from scratch with some interactive elements native from HTML and others created with javascript/React.
+                            Experience as junior developer writing websites and web apps with HTML, CSS and Javascript as well as its libraries such as React. <br />
                         </p>
                     </details>
                     
@@ -111,9 +102,10 @@ function MainContent(){
                     <details className="experiencedetails" >
                         <summary>Etc.</summary>
                         <p style={{textAlign:'left',paddingBottom:0,}}>
-                        In my previous role, I thrived in a dynamic office environment where adaptability was key. Working alongside diverse teams and facing ever changing challenges without a set routine made me hone my problem-solving skills and embrace the fast-paced nature of modern workspaces. </p>
+                        In my previous role I worked in a dynamic office environment alongside diverse teams. As the main responsible for my department, I restructured it, streamlining workflows and designing tools that significantly enhanced tracking tasks.
+                        </p>
                         <p style={{textAlign:'left',paddingBottom:0,paddingTop:0}}>
-                        Furthermore, as the main responsible for my department, I restructured it, streamlining workflows and designing tools that significantly enhanced tracking tasks.
+                        Furthermore, working without a set routine made me hone my problem-solving skills and embrace the fast-paced nature of modern workspaces. 
                         </p>
                         <p style={{textAlign:'left',paddingTop:0}}>
                         My passion for technology and my ability to optimize processes make me a valuable candidate for IT-related positions.
@@ -122,13 +114,62 @@ function MainContent(){
                 </div>
             </section>
 
+            <section>
+                <h2>Portfolio</h2>
+                <div id="portfoliocontainer" className="portfoliocontainer maincontainer">
+                    <details className="maindetails" >
+                        <summary>GitHub</summary>
+                        <p><a href="https://github.com/zerocordeiro/" target="_blank">Click here to go to my GitHub page</a> <br /><sup>(opens in new tab).</sup></p>
+                    </details>
+                    <details className="maindetails" >
+                        <summary>Resta-Zero</summary>
+                        <p>
+                            A browser-based "Lights Out" style game made with React. <br /><br />
+                            <PopUpImages id="imgrz" array={imagensrestazero} /> <br />
+                            <a href="https://zerocordeiro.github.io/resta-zero/" target="_blank">Click here and check it now!</a> <br /><sup>(opens in new tab)</sup> <br />
+                            <a href="https://github.com/zerocordeiro/resta-zero" target="_blank">See code on github.</a>
+                        
+                        </p>
+                    </details>
+                    <details className="maindetails" >
+                        <summary>Renda Floripa</summary>
+                        <p>
+                            Website concept for a group of artisans.
+                        </p>
+                        <PopUpImages id="imgr"
+                        array={imagensrenda}/>
+                    </details>
+                    <details className="maindetails" >
+                        <summary>Design</summary>
+                        <p>
+                            Graphic Design and Visual Communication works.
+                        </p>
+                        <h3>Stampet</h3>
+                        <p>Creation of logo, patterns for website and social media, icons and illustrations for a custom t-shirt seller.</p>
+                        <PopUpImages id="imgstampet" array={imagensstampet} />
+                        
+                        <h3>IM Agência do Atleta</h3>
+                        <p>Layout and image editing for social media advertisement, mail marketing and merchandise for a travel agency focused on sports events.</p>
+                        <PopUpImages id="imgim" array={imagensim} />
+
+                        <h3>Infodesign</h3>
+                        <p>Custom fluxograms and infographics for science publications.</p>
+                        <PopUpImages id="imginfodesign" array={imagensinfodesign}/>
+                    </details>
+                </div>
+            </section>
+
+
+
             <section id="additionalinfo">
                 <h2>Additional info</h2>
                 <div id="infocontainer" className="infocontainer maincontainer">
                 <p>
                     <b>Links:</b> <br />
                     <a href="http://lattes.cnpq.br/0392527294105054" target="_blank">Academical</a> <br />
-                    <a href="https://forms.gle/FxRDgcStsw5HvreL9" target="_blank">Contact Form</a>
+                    <a href="https://forms.gle/FxRDgcStsw5HvreL9" target="_blank">Contact Form</a><br />
+                    <a href="https://www.linkedin.com/in/zerocordeiro/" target="_blank">LinkedIn</a><br />
+                    <a href="https://github.com/zerocordeiro/" target="_blank">My GitHub</a><br />
                 </p>
                 </div>
             </section>
